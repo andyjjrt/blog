@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>
+    
+      Test | andyjjrt&#39;s blog
+    
+  </title>
+  <meta name="description" content="var a = "helloworld"console.log(a)">
+  
+  <link rel="stylesheet" href="/blog/css/bootstrap.css">
+  <link rel="stylesheet" href="/blog/css/syntax.css">
+
+  <link rel="canonical" href="http://andyjjrt.github.io/blog/jekyll/update/2021/03/15/test2.html">
+  <style>
+    pre code {
+      border-radius: 5px;
+      background: rgb(54, 54, 54);
+      display: block;
+      padding: 20px;
+    }
+    .sidebar{
+      display: none;
+    }
+    @media (min-width: 992px) {
+      .sidebar{
+        display: block;
+      }
+    }
+  </style>
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/blog/">andyjjrt's blog</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          
+            
+              
+                <li class="nav-item">
+                  <a class="nav-link" href="/blog/about/">About</a>
+                </li>
+              
+            
+          
+            
+          
+            
+          
+        </ul>
+        <form class="d-flex">
+          <a class="btn btn-light" role="button" href="https://github.com/andyjjrt">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+    </svg>
+    andyjjrt
+</a>
+        </form>
+      </div>
+    </div>
+  </nav>
+</header>
+
+    <br>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Test</h1>
+    <p class="post-meta float-end">
+      <time datetime="2021-03-15T15:30:39+08:00" itemprop="datePublished">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock-fill" viewBox="0 0 16 16">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+        </svg>
+        &nbsp;
+        Mar 15, 2021
+      </time>
+    </p>
+    
+    <br>
+  </header>
+  <hr>
+  <div class="container" itemprop="articleBody">
+    <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">helloworld</span><span class="dl">"</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+
+<span class="c">###### CONFIG  </span>
+<span class="nv">ACCEPTED_HOSTS</span><span class="o">=</span><span class="s2">"/root/.hag_accepted.conf"</span>
+<span class="nv">BE_VERBOSE</span><span class="o">=</span><span class="nb">false
+
+</span><span class="k">if</span> <span class="o">[</span> <span class="s2">"</span><span class="nv">$UID</span><span class="s2">"</span> <span class="nt">-ne</span> 0 <span class="o">]</span>
+<span class="k">then
+ </span><span class="nb">echo</span> <span class="s2">"Superuser rights required"</span>
+ <span class="nb">exit </span>2
+<span class="k">fi
+
+</span>genApacheConf<span class="o">(){</span>
+ <span class="nb">echo</span> <span class="nt">-e</span> <span class="s2">"# Host </span><span class="k">${</span><span class="nv">HOME_DIR</span><span class="k">}</span><span class="nv">$1</span><span class="s2">/</span><span class="nv">$2</span><span class="s2"> :"</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+  </div>
+
+</article>
+
+        </div>
+        <div class="col-3 sidebar" >
+          <div class="card" style="width: 18rem;">
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">An item</li>
+        <li class="list-group-item">A second item</li>
+        <li class="list-group-item">A third item</li>
+    </ul>
+</div>
+        </div>
+      </div>
+      
+    </div>
+
+  </body>
+
+</html>
