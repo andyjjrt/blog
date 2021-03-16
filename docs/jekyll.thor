@@ -6,7 +6,7 @@ class Jekyll < Thor
     title = title.join(" ")
     date = Time.now.strftime('%Y-%m-%d')
     filename = "_posts/#{date}-#{title.to_url}.markdown"
-
+	time_ = Time.now.strftime("%Y-%m-%d %H:%M:%S %z")
     if File.exist?(filename)
       abort("#{filename} already exists!")
     end
@@ -16,7 +16,8 @@ class Jekyll < Thor
       post.puts "---"
       post.puts "layout: post"
       post.puts "title: \"#{title.gsub(/&/,'&amp;')}\""
-      post.puts "tags:"
+	  post.puts "date: #{time_}"
+	  post.puts "tags:"
       post.puts " -"
       post.puts "---"
     end

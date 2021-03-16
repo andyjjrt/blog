@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>
+    
+      OJ-cli | andyjjrt&#39;s blog
+    
+  </title>
+  <meta name="description" content="oj-cliInstallationInstallation in NCCU GHOST">
+  
+  <link rel="stylesheet" href="/blog/css/bootstrap.css">
+  <link rel="stylesheet" href="/blog/css/syntax.css">
+  <script src="/blog/js/bootstrap.js"></script>
+  <link rel="canonical" href="http://andyjjrt.github.io/blog/2021/03/15/test.html">
+  <style>
+    pre code {
+      border-radius: 5px;
+      background: rgb(54, 54, 54);
+      display: block;
+      padding: 20px;
+    }
+    .sidebar{
+      display: none;
+    }
+    @media (min-width: 992px) {
+      .sidebar{
+        display: block;
+      }
+    }
+  </style>
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/blog/">andyjjrt's blog</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          
+            
+              
+                <li class="nav-item">
+                  <a class="nav-link" href="/blog/about/">About</a>
+                </li>
+              
+            
+          
+            
+              
+                <li class="nav-item">
+                  <a class="nav-link" href="/blog/archieve/">Archieve</a>
+                </li>
+              
+            
+          
+            
+          
+            
+          
+            
+              
+                <li class="nav-item">
+                  <a class="nav-link" href="/blog/tags/">Tags</a>
+                </li>
+              
+            
+          
+        </ul>
+        <form class="d-flex">
+          <a class="btn btn-light" role="button" href="https://github.com/andyjjrt">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+    </svg>
+    andyjjrt
+</a>
+        </form>
+      </div>
+    </div>
+  </nav>
+</header>
+
+    <br>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">OJ-cli</h1>
+    <p class="post-meta float-end">
+      <time datetime="2021-03-15T15:30:39+08:00" itemprop="datePublished">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock-fill" viewBox="0 0 16 16">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+        </svg>
+        &nbsp;
+        Mar 15, 2021
+      </time>
+    </p>
+    
+      <a href="/blog/tags/#test1"><span class="badge rounded-pill bg-dark">test1</span></a>&nbsp;
+    
+      <a href="/blog/tags/#test2"><span class="badge rounded-pill bg-dark">test2</span></a>&nbsp;
+    
+      <a href="/blog/tags/#test3"><span class="badge rounded-pill bg-dark">test3</span></a>&nbsp;
+    
+    <br>
+  </header>
+  <hr>
+  <div class="container" itemprop="articleBody">
+    <h1 id="oj-cli">oj-cli</h1>
+<h2 id="installation">Installation</h2>
+<h3 id="installation-in-nccu-ghost">Installation in NCCU GHOST</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo</span> <span class="s1">'alias oj="python2.7 ~s10940/oj-cli/oj.py"'</span> <span class="o">&gt;&gt;</span> ~/.profile
+<span class="nb">source</span> ~/.profile
+</code></pre></div></div>
+
+<h3 id="installation-from-source-code">Installation from source code</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> ~
+git clone https://github.com/andyjjrt/oj-cli.git
+<span class="nb">cd </span>oj-cli
+<span class="nb">echo</span> <span class="s1">'alias oj="python2.7 ~/oj-cli/oj"'</span> <span class="o">&gt;&gt;</span> ~/.bashrc
+<span class="nb">source</span> ~/.bashrc
+</code></pre></div></div>
+
+<p>If your shell is different like <code class="language-plaintext highlighter-rouge">ash</code>, you may need to change <code class="language-plaintext highlighter-rouge">.bashrc</code> to <code class="language-plaintext highlighter-rouge">.profile</code>.
+After installation, please modify <code class="language-plaintext highlighter-rouge">CONTEST_NAME</code> variable in <code class="language-plaintext highlighter-rouge">constants.py</code> to the target contest name.</p>
+
+<h3 id="commands">Commands</h3>
+<h3 id="oj-login">oj login</h3>
+<h4 id="about">About</h4>
+<p>Use <code class="language-plaintext highlighter-rouge">oj login</code> to login to the account in OnlineJudge. It required you to enter your account information so that <code class="language-plaintext highlighter-rouge">oj-cli</code> could access OnlineJudge service successfully. After entering your username and password. <code class="language-plaintext highlighter-rouge">oj-cli</code> will respond if you login successfully or not.</p>
+<h4 id="usage">Usage</h4>
+<p>No argument required. Only enter <code class="language-plaintext highlighter-rouge">oj login</code> and fill the account information to login to OnlineJudge.</p>
+<h4 id="example">Example</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ oj login
+Usernme:
+Password:
+</code></pre></div></div>
+
+<h3 id="oj-get-">oj get <assign_no></assign_no></h3>
+<h4 id="about-1">About</h4>
+<p>Use <code class="language-plaintext highlighter-rouge">oj get &lt;assign_no&gt;</code> to download the latest assignment from contest. The downloaded files are stored in folder <code class="language-plaintext highlighter-rouge">hwX</code>. The folder includes testing data, output data, and template C script, which are named as <code class="language-plaintext highlighter-rouge">1.in</code>, <code class="language-plaintext highlighter-rouge">1.out</code>, and <code class="language-plaintext highlighter-rouge">main.c</code> separately.</p>
+<h4 id="usage-1">Usage</h4>
+<p><code class="language-plaintext highlighter-rouge">oj get</code> only required one argument to execute.</p>
+<h5 id="assign_no">assign_no</h5>
+<p>assign_no represents your assign number like <code class="language-plaintext highlighter-rouge">hw1</code>, <code class="language-plaintext highlighter-rouge">hw2</code> according to your updates. <code class="language-plaintext highlighter-rouge">oj-cli</code> will prompt <code class="language-plaintext highlighter-rouge">Invalid Assign Number!</code> if the input assign number has not opened and give valid assign numbers.</p>
+
+<h4 id="example-1">Example</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ oj get hw1
+Made a [hw1] folder in your current directory.
+</code></pre></div></div>
+
+<h3 id="oj-get_p-">oj get_p <problem_no></problem_no></h3>
+<h4 id="about-2">About</h4>
+<p>Use <code class="language-plaintext highlighter-rouge">oj get_p &lt;problem_no&gt;</code> to download the problem in problem list. The downloaded files are stored in folder <code class="language-plaintext highlighter-rouge">problem_X</code>. The folder includes testing data, output data, and template C script, which are named as <code class="language-plaintext highlighter-rouge">1.in</code>, <code class="language-plaintext highlighter-rouge">1.out</code>, and <code class="language-plaintext highlighter-rouge">main.c</code> separately.</p>
+<h4 id="usage-2">Usage</h4>
+<p><code class="language-plaintext highlighter-rouge">oj get_p</code> only required one argument to execute.</p>
+<h5 id="problem_no">problem_no</h5>
+<p>problem_no represents your problem display id like <code class="language-plaintext highlighter-rouge">1</code>, <code class="language-plaintext highlighter-rouge">57-2</code> according to your updates. <code class="language-plaintext highlighter-rouge">oj-cli</code> will prompt <code class="language-plaintext highlighter-rouge">Invalid Problem Id!</code> if the input problem id is invalid.</p>
+<h5 id="notice">Notice</h5>
+<p>problem_no somtimes has blanks, cli will automatically replace them.</p>
+<h4 id="example-2">Example</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ oj get_p 57-2
+Made a [problem_57-2] folder in your current directory.
+</code></pre></div></div>
+
+<h3 id="oj-submit--">oj submit <assign_no> <code_file></code_file></assign_no></h3>
+<h4 id="about-3">About</h4>
+<p>Use <code class="language-plaintext highlighter-rouge">oj submit &lt;assign_no&gt; &lt;code_file&gt;</code> to submit your code to contest and return the results.</p>
+
+<h4 id="usage-3">Usage</h4>
+<p><code class="language-plaintext highlighter-rouge">oj submit</code> required two arguments to execute.</p>
+
+<h5 id="assign_no-1">assign_no</h5>
+<p>assign_no represents your assign number like <code class="language-plaintext highlighter-rouge">hw1</code>, <code class="language-plaintext highlighter-rouge">hw2</code> according to your updates. <code class="language-plaintext highlighter-rouge">oj-cli</code> will prompt <code class="language-plaintext highlighter-rouge">Invalid Assign Number!</code> if the input assign number has not opened and give valid assign numbers.</p>
+
+<h5 id="code_file">code_file</h5>
+<p>code_file is the path to your script. <code class="language-plaintext highlighter-rouge">oj</code> will read the file then submit this answer to OnlineJudge Service.</p>
+
+<h4 id="example-3">Example</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ oj submit hw2 hw2.c
+Submit successfully!
+Getting submission status...
+=================================================
+Result: AC(Accept)              Score: 100
+|ID |Status                |   Time|  Mem| Score|
+|#1 |AC(Accept)            |    0ms|  2MB|    20|
+|#2 |AC(Accept)            |    2ms|  2MB|    20|
+|#3 |AC(Accept)            |   40ms|  2MB|    20|
+|#4 |AC(Accept)            |   75ms|  2MB|    20|
+|#5 |AC(Accept)            |    5ms|  2MB|    20| 
+================================================= 
+</code></pre></div></div>
+
+<h3 id="oj-submit_p--">oj submit_p <problem_no> <code_file></code_file></problem_no></h3>
+<h4 id="about-4">About</h4>
+<p>Use <code class="language-plaintext highlighter-rouge">oj submit_p &lt;problem_no&gt; &lt;code_file&gt;</code> to submit your code to problem and return the results.</p>
+
+<h4 id="usage-4">Usage</h4>
+<p><code class="language-plaintext highlighter-rouge">oj submit_p</code> required three arguments to execute.</p>
+
+<h5 id="problem_no-1">problem_no</h5>
+<p>assign_no represents your assign number like <code class="language-plaintext highlighter-rouge">1</code>, <code class="language-plaintext highlighter-rouge">2</code> according to your updates. <code class="language-plaintext highlighter-rouge">oj-cli</code> will prompt <code class="language-plaintext highlighter-rouge">Invalid Assign Number!</code> if the input assign number soes not exist.</p>
+
+<p>Notice that blanks in <code class="language-plaintext highlighter-rouge">problem_no</code> will be replaced by nothing.</p>
+
+<h5 id="code_file-1">code_file</h5>
+<p>code_file is the path to your script. <code class="language-plaintext highlighter-rouge">oj</code> will read the file then submit this answer to OnlineJudge Service.</p>
+
+<h4 id="example-4">Example</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ oj problem_submit 1091CP1_Exercise8 ex8.c
+Submit successfully!!
+Getting submission status...
+========================================================
+Result: AC(Accept)                     Score: 100
+|ID |Status                       |   Time|  Mem| Score|
+|#1 |AC(Accept)                   |    1ms|  2MB|    20|
+|#2 |AC(Accept)                   |    1ms|  2MB|    20|
+|#3 |AC(Accept)                   |    1ms|  2MB|    20|
+|#4 |AC(Accept)                   |    2ms|  2MB|    20|
+|#5 |AC(Accept)                   |    1ms|  2MB|    20|
+========================================================
+
+</code></pre></div></div>
+
+<h3 id="oj-rank-">oj rank <assign_no></assign_no></h3>
+<h4 id="about-5">About</h4>
+<p>Use <code class="language-plaintext highlighter-rouge">oj rank &lt;assign_no&gt;</code> to view the class result of this assign.</p>
+<h4 id="usage-5">Usage</h4>
+<p><code class="language-plaintext highlighter-rouge">oj rank</code> only required one argument to execute.</p>
+<h4 id="assign_no-2">assign_no</h4>
+<p>assign_no represents your assign number like <code class="language-plaintext highlighter-rouge">hw1</code>, <code class="language-plaintext highlighter-rouge">hw2</code> according to your updates. <code class="language-plaintext highlighter-rouge">oj-cli</code> will prompt <code class="language-plaintext highlighter-rouge">Invalid Assign Number!</code> if the input assign number has not opened and give valid assign numbers.</p>
+
+<h4 id="example-5">Example</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ oj rank hw2
+Your status of hw2 : AC(Accept)
+================================================
+   1~ 10 :  0  |  AC(Accept)             : 8
+  11~ 20 :  0  |  RE(Runtime Error)      : 29
+  21~ 30 :  0  |  PAC(Partial Accepted)  : 54
+  31~ 40 :  1  |  WA(Wrong Answer)       : 81
+  41~ 50 :  0  |  CE(Compilation Error)  : 10
+  51~ 60 :  0  |--------------------------------
+  61~ 70 :  0  |  Total submissions      : 182
+  71~ 80 :  0  |
+  81~ 90 :  0  |
+  91~100 : 12  |
+================================================
+For real score ranking,please go to the website. 
+</code></pre></div></div>
+
+<h3 id="oj-update">oj update</h3>
+<h4 id="about-6">About</h4>
+<p>Use <code class="language-plaintext highlighter-rouge">oj update</code> to get the latest assignments.</p>
+<h4 id="usage-6">Usage</h4>
+<p>No argument required. Only enter <code class="language-plaintext highlighter-rouge">oj update</code> and it will automatically get the assignments and the problems.</p>
+
+<h4 id="example-6">Example</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ oj update
+Updated problems successfully!
+Found HomeWork: hw01 [Nim!]
+Found HomeWork: ex01 [Tree Postorder]
+Updated assign successfully!
+</code></pre></div></div>
+
+<h3 id="oj-status-">oj status <assign_no></assign_no></h3>
+<h4 id="about-7">About</h4>
+<p>Use <code class="language-plaintext highlighter-rouge">oj status &lt;assign_no&gt;</code> to view the latest 20 submissions of this contest.</p>
+<h4 id="usage-7">Usage</h4>
+<p><code class="language-plaintext highlighter-rouge">oj status</code> only required one argument to execute.</p>
+<h5 id="assign_no-3">assign_no</h5>
+<p>assign_no represents your assign number like <code class="language-plaintext highlighter-rouge">hw1</code>, <code class="language-plaintext highlighter-rouge">hw2</code> according to your updates. <code class="language-plaintext highlighter-rouge">oj-cli</code> will prompt <code class="language-plaintext highlighter-rouge">Invalid Assign Number!</code> if the input assign number has not opened and give valid assign numbers.</p>
+
+<h4 id="example-7">Example</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ oj status hw2
+============================================================================
+|  Contest Name: hw2                                             |
+============================================================================
+|User        |Status                     |   Time|  Mem|               When|
+|108xxxxxx   |WA(Wrong Answer)           |    0ms|  2MB|2020-12-18 10:31:12|
+|109xxxxxx   |AC(Accept)                 |    0ms|  2MB|2020-12-18 10:07:14|
+|109xxxxxx   |PAC(Partial Accepted)      |    0ms|  2MB|2020-12-18 09:20:10|
+|109xxxxxx   |PAC(Partial Accepted)      |   21ms|  2MB|2020-12-18 09:20:02|
+|109xxxxxx   |PAC(Partial Accepted)      |   17ms|  2MB|2020-12-18 09:07:19|
+|109xxxxxx   |PAC(Partial Accepted)      |    1ms|  4MB|2020-12-18 08:50:13|
+============================================================================
+...
+</code></pre></div></div>
+
+<h3 id="oj-mystat-">oj mystat <option></option></h3>
+<h4 id="about-8">About</h4>
+<p>Use <code class="language-plaintext highlighter-rouge">oj mystat &lt;option&gt;</code> to view your latest 20 submissions of this contest, each of the submission has the specific ID.</p>
+<h4 id="usage-8">Usage</h4>
+<p><code class="language-plaintext highlighter-rouge">oj mystat</code> only required one argument to execute.</p>
+<h5 id="option">option</h5>
+<p>Here we have two options:</p>
+<ol>
+  <li>assign_no represents your assign number like <code class="language-plaintext highlighter-rouge">hw1</code>, <code class="language-plaintext highlighter-rouge">hw2</code> according to your updates. <code class="language-plaintext highlighter-rouge">oj-cli</code> will prompt <code class="language-plaintext highlighter-rouge">Invalid Assign Number!</code> if the input assign number has not opened and give valid assign numbers.</li>
+  <li>IDx is the specific ID that <code class="language-plaintext highlighter-rouge">oj mystat &lt;hwx&gt;</code> gives you, here you can see details of this submition.
+    <h4 id="note">Note</h4>
+    <p>The ID will only update if you type <code class="language-plaintext highlighter-rouge">oj mystat &lt;hwx&gt;</code></p>
+  </li>
+</ol>
+
+<h4 id="example-8">Example</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ oj mystat hw1
+====================================================================
+|  Contest Name: hw1                                     |
+====================================================================
+|ID  |Status                     |   Time|  Mem|               When|
+|ID 0|AC(Accept)                 |    0ms|  2MB|2020-12-17 10:39:13|
+====================================================================
+
+$ oj mystat ID4
+=================================================
+Result: PAC(Partial Accepted)   Score:  20
+|ID |Status                |   Time|  Mem| Score|
+|#1 |AC(Accept)            |    1ms|  2MB|    20|
+|#2 |WA(Wrong Answer)      |    2ms|  2MB|     0|
+|#3 |WA(Wrong Answer)      |   28ms|  2MB|     0|
+|#4 |WA(Wrong Answer)      |   48ms|  2MB|     0|
+|#5 |WA(Wrong Answer)      |    5ms|  2MB|     0|
+================================================= 
+</code></pre></div></div>
+
+<h3 id="oj-dl-">oj dl <ID></ID></h3>
+<h4 id="about-9">About</h4>
+<p>Use <code class="language-plaintext highlighter-rouge">oj dl &lt;ID&gt;</code> to download your specific submission’s source code.</p>
+<h4 id="usage-9">Usage</h4>
+<p><code class="language-plaintext highlighter-rouge">oj dl</code> only required one argument to execute.</p>
+<h4 id="option-1">option</h4>
+<p>ID is the specific ID that <code class="language-plaintext highlighter-rouge">oj mystat &lt;hwx&gt;</code> gives you, here you can see details of this submition.</p>
+<h4 id="note-1">Note</h4>
+<p>The ID will only update if you type <code class="language-plaintext highlighter-rouge">oj mystat &lt;hwx&gt;</code></p>
+
+<h4 id="example-9">Example</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ oj dl ID0
+=================================================
+Result: AC(Accept)              Score: 100
+|ID |Status                |   Time|  Mem| Score|
+|#1 |AC(Accept)            |    0ms|  2MB|    20|
+|#2 |AC(Accept)            |    2ms|  2MB|    20|
+|#3 |AC(Accept)            |   40ms|  2MB|    20|
+|#4 |AC(Accept)            |   75ms|  2MB|    20|
+|#5 |AC(Accept)            |    5ms|  2MB|    20|
+=================================================
+Downloaded your file!!!
+File name:1097030xx|xxxxxxxxxxxxxxxxxxxxxxx.c in yor current directory. 
+</code></pre></div></div>
+
+
+  </div>
+
+</article>
+
+        </div>
+        <div class="col-3 sidebar" >
+          <div class="card">
+    <div class="card-header">
+      近期更新
+    </div>
+    <div class="card-body">
+        <ul class="list-group list-group-flush">
+            
+            
+              <a class="list-group-item list-group-item-action" href="/blog/2021/03/16/zhong-wen-ce-shi.html" role="button">
+                <h5 class="card-title">中文測試</h5></p>
+                <p class="card-text"><small class="text-muted"></small></p>
+                <p class="card-text"><small class="text-muted float-end">Mar 16, 2021</small></p>
+              </a>
+            
+              <a class="list-group-item list-group-item-action" href="/blog/2021/03/16/test1234.html" role="button">
+                <h5 class="card-title">test1234</h5></p>
+                <p class="card-text"><small class="text-muted"></small></p>
+                <p class="card-text"><small class="text-muted float-end">Mar 16, 2021</small></p>
+              </a>
+            
+              <a class="list-group-item list-group-item-action" href="/blog/2021/03/15/test.html" role="button">
+                <h5 class="card-title">OJ-cli</h5></p>
+                <p class="card-text"><small class="text-muted">oj-cli Installation Installation in NCCU GHOST echo...</small></p>
+                <p class="card-text"><small class="text-muted float-end">Mar 15, 2021</small></p>
+              </a>
+            
+        </ul>
+    </div>
+ </div>
+<br>
+<div class="card">
+    <div class="card-header">
+      標籤
+    </div>
+    <div class="card-body">
+        
+            <a href="/blog/tags/#test1"><span class="badge rounded-pill bg-dark">test1</span></a>
+        
+            <a href="/blog/tags/#test2"><span class="badge rounded-pill bg-dark">test2</span></a>
+        
+            <a href="/blog/tags/#test3"><span class="badge rounded-pill bg-dark">test3</span></a>
+        
+    </div>
+</div>
+  
+
+        </div>
+      </div>
+      
+    </div>
+
+  </body>
+
+</html>

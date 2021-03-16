@@ -15,7 +15,7 @@ layout: default
       </time>
     </p>
     {% for tag in page.tags %}
-      <span class="badge rounded-pill bg-dark">{{tag}}</span>&nbsp;
+      <a href="{{site.baseurl}}/tags/#{{tag}}"><span class="badge rounded-pill bg-dark">{{ tag }}</span></a>&nbsp;
     {% endfor %}
     <br>
   </header>

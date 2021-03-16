@@ -1,19 +1,18 @@
 ---
-layout: default
+layout: page
+title: Tags
+permalink: /tags/
 ---
 
-<div>
-  <h2 class="page-heading">Posts</h2>
-  <br>
+{% for tag in site.tags %}
+  <h4><span class="badge rounded-pill bg-dark">{{ tag[0] }}</span></h4>
   <ul class="list-group">
-    {% assign sorted = site.posts | sort: 'date' | reverse %}
-    {% for post in sorted %}
+    {% for post in tag[1] %}
       <a class="list-group-item list-group-item-action" href="{{ post.url | prepend: site.baseurl }}" role="button">
         <h5 class="card-title">{{ post.title }}</h5></p>
-        <p class="card-text"><small class="text-muted">{{ post.content | strip_html | truncatewords:7}}</small></p>
         <p class="card-text"><small class="text-muted float-end">{{ post.date | date: "%b %-d, %Y" }}</small></p>
       </a>
     {% endfor %}
   </ul>
-
-</div>
+  <br>
+{% endfor %}

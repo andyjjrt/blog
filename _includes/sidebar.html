@@ -1,7 +1,29 @@
-<div class="card" style="width: 18rem;">
-    <ul class="list-group list-group-flush">
-        <li class="list-group-item">An item</li>
-        <li class="list-group-item">A second item</li>
-        <li class="list-group-item">A third item</li>
-    </ul>
+<div class="card">
+    <div class="card-header">
+      近期更新
+    </div>
+    <div class="card-body">
+        <ul class="list-group list-group-flush">
+            {% assign sorted = site.posts | sort: 'date' | reverse %}
+            {% for post in sorted limit:3%}
+              <a class="list-group-item list-group-item-action" href="{{ post.url | prepend: site.baseurl }}" role="button">
+                <h5 class="card-title">{{ post.title }}</h5></p>
+                <p class="card-text"><small class="text-muted">{{ post.content | strip_html | truncatewords:7}}</small></p>
+                <p class="card-text"><small class="text-muted float-end">{{ post.date | date: "%b %-d, %Y" }}</small></p>
+              </a>
+            {% endfor %}
+        </ul>
+    </div>
+ </div>
+<br>
+<div class="card">
+    <div class="card-header">
+      標籤
+    </div>
+    <div class="card-body">
+        {% for tag in site.tags %}
+            <a href="{{site.baseurl}}/tags/#{{tag[0]}}"><span class="badge rounded-pill bg-dark">{{ tag[0] }}</span></a>
+        {% endfor %}
+    </div>
 </div>
+  
