@@ -1,5 +1,7 @@
 .highlight table td { padding: 5px; }
-.highlight table pre { margin: 0; }
+.highlight table pre { 
+  margin: 0;
+}
 .highlight .c, .highlight .ch, .highlight .cd, .highlight .cpf {
   color: #75715e;
   font-style: italic;
@@ -211,4 +213,11 @@
 .highlight {
   color: #f8f8f2;
   background-color: #49483e;
+}
+
+pre{
+  padding: 20px;
+  overflow: auto;
+  word-wrap: normal;
+  white-space: pre; 
 }
