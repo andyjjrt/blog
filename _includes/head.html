@@ -2,7 +2,8 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
+  <link rel="shortcut icon" href="{{ "/image/favicon.ico" | prepend: site.baseurl }}" />
+  <link rel="bookmark" href="{{ "/image/favicon.ico" | prepend: site.baseurl }}" />
   <title>
     {% if page.title %}
       {{ page.title | escape }} | {{ site.title | escape }}
@@ -12,9 +13,9 @@
   </title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
   
-  <link rel="stylesheet" href="{{ "/css/bootstrap.css" | prepend: site.baseurl }}">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
   <link rel="stylesheet" href="{{ "/css/syntax.css" | prepend: site.baseurl }}">
-  <script src="{{ "/js/bootstrap.js" | prepend: site.baseurl }}"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <style>
     pre code {
@@ -22,6 +23,7 @@
       background: rgb(54, 54, 54);
       display: block;
       padding: 20px;
+      overflow: auto;
     }
     .sidebar{
       display: none;
