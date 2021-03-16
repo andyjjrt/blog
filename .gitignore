@@ -1,8 +1,9 @@
-./vender
-./_site
-./.bundle
-./.jekyll-cache
-./.sass-cache
-./Gemfile
-./Gemfile.lock
-./jekyll.thor
+vendor/
+.bundle/
+.jekyll-cache/
+.sass-cache/
+Gemfile
+Gemfile.lock
+jekyll.thor
+_site/
+.jekyll-metadata
