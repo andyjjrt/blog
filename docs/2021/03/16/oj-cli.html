@@ -9,15 +9,15 @@
   <link rel="bookmark" href="/blog/image/favicon.ico" />
   <title>
     
-      中文測試 | andyjjrt&#39;s blog
+      oj-cli | andyjjrt&#39;s blog
     
   </title>
-  <meta name="description" content="">
+  <meta name="description" content="source code: https://github.com/andyjjrt/oj-cli">
   
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
   <link rel="stylesheet" href="/blog/css/syntax.css">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
-  <link rel="canonical" href="http://andyjjrt.github.io/blog/2021/03/16/zhong-wen-ce-shi.html">
+  <link rel="canonical" href="http://andyjjrt.github.io/blog/2021/03/16/oj-cli.html">
   <style>
     pre {
       overflow: auto;
@@ -104,9 +104,9 @@
           <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">中文測試</h1>
+    <h1 class="post-title" itemprop="name headline">oj-cli</h1>
     <p class="post-meta float-end">
-      <time datetime="2021-03-16T15:22:57+08:00" itemprop="datePublished">
+      <time datetime="2021-03-16T20:05:03+08:00" itemprop="datePublished">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock-fill" viewBox="0 0 16 16">
           <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
         </svg>
@@ -115,11 +115,73 @@
       </time>
     </p>
     
+      <a href="/blog/tags/#python"><span class="badge rounded-pill bg-dark">python</span></a>&nbsp;
+    
+      <a href="/blog/tags/#cli"><span class="badge rounded-pill bg-dark">cli</span></a>&nbsp;
+    
     <br>
   </header>
   <hr>
   <div class="container" itemprop="articleBody">
-    
+    <p><strong>source code: <a href="https://github.com/andyjjrt/oj-cli">https://github.com/andyjjrt/oj-cli</a></strong></p>
+
+<h4 id="ghost安裝">GHOST安裝：</h4>
+
+<p>如果有舊cli的，請開啟根目錄裡的<code class="language-plaintext highlighter-rouge">.profile</code>，將</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">"~f103207425/.local/bin:</span><span class="nv">$PATH</span><span class="s2">"</span>
+</code></pre></div></div>
+<p>這行刪除。</p>
+
+<p>然後key這兩行指令：</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo</span> <span class="s1">'alias oj="python2.7 ~s10940/oj-cli/oj.py"'</span> <span class="o">&gt;&gt;</span> ~/.profile
+<span class="nb">source</span> ~/.profile
+</code></pre></div></div>
+
+<p>本機安裝請至github repo clone下來，記得改參數設定及安裝python2.7。</p>
+
+<p>gitbash理論無法使用，curl不知道為甚麼死掉，如果特別想用再看看怎麼解決</p>
+
+<h4 id="指令">指令：</h4>
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">oj login</code>：顧名思義登入 不解釋。</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">oj update</code>：會去目標contest裡面所有的題目抓回來(ghost 裡的預設1092CP2)，以及更新problem題目。</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">oj get [assign_no]</code>：抓取作業，會在當前目錄蓋一個資料夾，裡面包含範例輸入/輸出檔及簡單範本。</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">oj submit [assign_no] [code_file]</code>：繳交作業，對於每筆測資都會顯示通過狀況。因為這學期開放使用c++，因此副檔名允許.c和.cpp。</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">oj rank [assign_no]</code>：顯示分數分布、各種通過情形的次數、自己這題的狀況、總繳交次數等等。</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">oj status [assign_no]</code>：顯示該作業的近20筆繳交紀錄。</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">oj mystat [assign_no]</code>：顯示”個人”該作業的近20筆繳交紀錄。</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">oj dl [id]</code>：下載繳交過的檔案(ID在mystat產生)。</p>
+  </li>
+</ul>
+
+<p>如果你有在寫problem：</p>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">oj get_p [problem_id]</code>：抓取題目，注意problem_id中的空格要全部省略!!</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">oj submit_p [problem_id] [code_file]</code>：上傳題目，程式會自動判別使用的語言上傳，一樣會顯示通過狀況。</p>
+  </li>
+</ul>
+
+<p>詳細的使用說明和範例都在repo裡</p>
 
   </div>
 
@@ -135,24 +197,10 @@
         <ul class="list-group list-group-flush">
             
             
-              <a class="list-group-item list-group-item-action" href="/blog/2021/03/16/zhong-wen-ce-shi.html" role="button">
-                <h5 class="card-title">中文測試</h5></p>
-                <p class="card-text"><small class="text-muted">
-</small></p>
+              <a class="list-group-item list-group-item-action" href="/blog/2021/03/16/oj-cli.html" role="button">
+                <h5 class="card-title">oj-cli</h5></p>
+                <p class="card-text"><small class="text-muted">source code: https://github.com/andyjjrt/oj-cli GHOST安裝： 如果有舊cli的，請開啟根目錄裡的.profile，將 export PATH="~f103207425/.local/bin:$PATH"...</small></p>
                 <p class="card-text"><small class="text-muted float-end">Mar 16, 2021</small></p>
-              </a>
-            
-              <a class="list-group-item list-group-item-action" href="/blog/2021/03/16/test1234.html" role="button">
-                <h5 class="card-title">test1234</h5></p>
-                <p class="card-text"><small class="text-muted">
-</small></p>
-                <p class="card-text"><small class="text-muted float-end">Mar 16, 2021</small></p>
-              </a>
-            
-              <a class="list-group-item list-group-item-action" href="/blog/2021/03/15/test.html" role="button">
-                <h5 class="card-title">OJ-cli</h5></p>
-                <p class="card-text"><small class="text-muted">oj-cli Installation Installation in NCCU GHOST echo...</small></p>
-                <p class="card-text"><small class="text-muted float-end">Mar 15, 2021</small></p>
               </a>
             
         </ul>
@@ -165,11 +213,9 @@
     </div>
     <div class="card-body">
         
-            <a href="/blog/tags/#test1"><span class="badge rounded-pill bg-dark">test1</span></a>
+            <a href="/blog/tags/#python"><span class="badge rounded-pill bg-dark">python</span></a>
         
-            <a href="/blog/tags/#test2"><span class="badge rounded-pill bg-dark">test2</span></a>
-        
-            <a href="/blog/tags/#test3"><span class="badge rounded-pill bg-dark">test3</span></a>
+            <a href="/blog/tags/#cli"><span class="badge rounded-pill bg-dark">cli</span></a>
         
     </div>
 </div>
