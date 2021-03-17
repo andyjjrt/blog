@@ -9,15 +9,15 @@
   <link rel="bookmark" href="/blog/image/favicon.ico" />
   <title>
     
-      oj-cli | andyjjrt&#39;s blog
+      背包問題 | andyjjrt&#39;s blog
     
   </title>
-  <meta name="description" content="source code: https://github.com/andyjjrt/oj-cli">
+  <meta name="description" content="DP">
   
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
   <link rel="stylesheet" href="/blog/css/syntax.css">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
-  <link rel="canonical" href="http://andyjjrt.github.io/blog/2021/03/16/oj-cli.html">
+  <link rel="canonical" href="http://andyjjrt.github.io/blog/2021/03/18/bei-bao-wen-ti.html">
   <style>
     
     .sidebar{
@@ -100,84 +100,58 @@
           <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">oj-cli</h1>
+    <h1 class="post-title" itemprop="name headline">背包問題</h1>
     <p class="post-meta float-end">
-      <time datetime="2021-03-16T20:05:03+08:00" itemprop="datePublished">
+      <time datetime="2021-03-18T01:39:30+08:00" itemprop="datePublished">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock-fill" viewBox="0 0 16 16">
           <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
         </svg>
         &nbsp;
-        Mar 16, 2021
+        Mar 18, 2021
       </time>
     </p>
     
-      <a href="/blog/tags/#python"><span class="badge rounded-pill bg-dark">python</span></a>&nbsp;
+      <a href="/blog/tags/#C"><span class="badge rounded-pill bg-dark">C</span></a>&nbsp;
     
-      <a href="/blog/tags/#cli"><span class="badge rounded-pill bg-dark">cli</span></a>&nbsp;
+      <a href="/blog/tags/#DP"><span class="badge rounded-pill bg-dark">DP</span></a>&nbsp;
     
     <br>
   </header>
   <hr>
   <div class="container" itemprop="articleBody">
-    <p><strong>source code: <a href="https://github.com/andyjjrt/oj-cli">https://github.com/andyjjrt/oj-cli</a></strong></p>
+    <h4 id="dp">DP</h4>
 
-<h4 id="ghost安裝">GHOST安裝：</h4>
-
-<p>如果有舊cli的，請開啟根目錄裡的<code class="language-plaintext highlighter-rouge">.profile</code>，將</p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">"~f103207425/.local/bin:</span><span class="nv">$PATH</span><span class="s2">"</span>
-</code></pre></div></div>
-<p>這行刪除。</p>
-
-<p>然後key這兩行指令：</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo</span> <span class="s1">'alias oj="python2.7 ~s10940/oj-cli/oj.py"'</span> <span class="o">&gt;&gt;</span> ~/.profile
-<span class="nb">source</span> ~/.profile
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  |  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16
+----------------------------------------------------
+ 1|  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16
+ 4|  1  2  3  1  2  3  4  2  3  4  5  3  4  5  6  4
+ 9|  1  2  3  1  2  3  4  2  1  2  3  4  2  3  4  4
+ ... 
 </code></pre></div></div>
 
-<p>本機安裝請至github repo clone下來，記得改參數設定及安裝python2.7。</p>
+<p>直行代表<strong>堆積到n所需數目</strong>，橫列代表<strong>堆積的數字</strong>。</p>
 
-<p>gitbash理論無法使用，curl不知道為甚麼死掉，如果特別想用再看看怎麼解決</p>
+<p>因此第一橫排裡面，因為都是用1堆積，所以對於n而言，需要n個1來堆積成n。</p>
 
-<h4 id="指令">指令：</h4>
-<ul>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">oj login</code>：顧名思義登入 不解釋。</p>
-  </li>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">oj update</code>：會去目標contest裡面所有的題目抓回來(ghost 裡的預設1092CP2)，以及更新problem題目。</p>
-  </li>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">oj get [assign_no]</code>：抓取作業，會在當前目錄蓋一個資料夾，裡面包含範例輸入/輸出檔及簡單範本。</p>
-  </li>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">oj submit [assign_no] [code_file]</code>：繳交作業，對於每筆測資都會顯示通過狀況。因為這學期開放使用c++，因此副檔名允許.c和.cpp。</p>
-  </li>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">oj rank [assign_no]</code>：顯示分數分布、各種通過情形的次數、自己這題的狀況、總繳交次數等等。</p>
-  </li>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">oj status [assign_no]</code>：顯示該作業的近20筆繳交紀錄。</p>
-  </li>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">oj mystat [assign_no]</code>：顯示”個人”該作業的近20筆繳交紀錄。</p>
-  </li>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">oj dl [id]</code>：下載繳交過的檔案(ID在mystat產生)。</p>
-  </li>
-</ul>
+<p>第二排開始，以1堆積的數字可以替換成4，以4為例，他可以用4個1，或是1個4來完成，但明顯1&lt;4，故4在1,4的情況下最小堆積為1。</p>
 
-<p>如果你有在寫problem：</p>
+<p>接著看到5，5比4大，因此其中4可以換成一個4，剩下1用1繼續替補，6、7同理。8的時候，依樣將一個4替換掉，扣4後最佳拿法已是拿1個4，因此8的最佳拿法即是拿2個4。</p>
 
-<ul>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">oj get_p [problem_id]</code>：抓取題目，注意problem_id中的空格要全部省略!!</p>
-  </li>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">oj submit_p [problem_id] [code_file]</code>：上傳題目，程式會自動判別使用的語言上傳，一樣會顯示通過狀況。</p>
-  </li>
-</ul>
+<p><strong>觀察出來了嗎？</strong></p>
 
-<p>詳細的使用說明和範例都在repo裡</p>
+<blockquote>
+  <p>假設當前最大堆積數為i，對於大於i的n而言，其最佳解為</p>
+
+  <p><code class="language-plaintext highlighter-rouge">min(當前堆積方法，(n-i的堆積方法)+1)</code></p>
+</blockquote>
+
+<p><br /><br /></p>
+
+<h4 id="code-hw3">CODE <a href="https://oj.mozix.ebg.tw/contest/67/problem/hw3">hw3</a></h4>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// waiting for hw3 end</span>
+</code></pre></div></div>
+
 
   </div>
 
@@ -195,7 +169,7 @@
             
               <a class="list-group-item list-group-item-action" href="/blog/2021/03/18/bei-bao-wen-ti.html" role="button">
                 <h5 class="card-title">背包問題</h5></p>
-                <p class="card-text"><small class="text-muted">#### DP ``` | 1 2 3...</small></p>
+                <p class="card-text"><small class="text-muted">DP | 1 2 3 4 5...</small></p>
                 <p class="card-text"><small class="text-muted float-end">Mar 18, 2021</small></p>
               </a>
             
