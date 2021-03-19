@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "背包問題"
+title: "背包問題1 觀念"
 date: 2021-03-18 01:39:30 +0800
 tags:
  - C
