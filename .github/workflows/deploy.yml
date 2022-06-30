@@ -33,7 +33,7 @@ jobs:
           cp ./dist/index.html ./dist/404.html
 
       - name: Create .nojekyll to use _nuxt folder
-        run: touch .nojekyll
+        run: touch ./dist/.nojekyll
       
       # Runs a single command using the runners shell
       - name: Deploy
