@@ -31,6 +31,9 @@ jobs:
       - name: Duplicate index.html
         run: |
           cp ./dist/index.html ./dist/404.html
+
+      - name: Create .nojekyll to use _nuxt folder
+        run: touch .nojekyll
       
       # Runs a single command using the runners shell
       - name: Deploy
