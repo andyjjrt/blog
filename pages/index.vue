@@ -5,3 +5,9 @@
     </ContentList>
   </div>
 </template>
+
+<script setup>
+  useHead({
+    title: "Posts | andyjjrt's blog"
+  })
+</script>

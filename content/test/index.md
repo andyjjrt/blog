@@ -1,3 +1,9 @@
+---
+title: 'Title of the page'
+description: 'meta description of the page'
+tag: ["123", "456"]
+---
+
 An h1 header
 ============
 
@@ -146,7 +152,7 @@ Here's a "line block":
 
 and images can be specified like so:
 
-![example image](example-image.jpg "An exemplary image")
+![example image](/content/test/E-6215sVcAMRezw.jpg "An exemplary image")
 
 Inline math equations go in like so: $\omega = d\phi / dt$. Display
 math should get its own line and be put in in double-dollarsigns:
