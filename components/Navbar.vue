@@ -1,6 +1,6 @@
 <template>
   <div class="navbar bg-base-200 sticky top-0">
-    <div class="navbar-start">
+    <div class="grow">
       <a class="px-6 p-2 font-bold normal-case text-xl">Blog</a>
       <ul class="nav-menu">
         <li>
@@ -11,7 +11,7 @@
         </li>
       </ul>
     </div>
-    <div class="navbar-end">
+    <div class="">
       <label class="swap swap-rotate px-6">
         <input type="checkbox" v-model="dark" />
         <!-- sun icon -->
