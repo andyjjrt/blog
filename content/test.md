@@ -4,9 +4,6 @@ description: 'meta description of the page'
 tag: ["123", "456"]
 ---
 
-An h1 header
-============
-
 Paragraphs are separated by a blank line.
 
 2nd paragraph. *Italic*, **bold**, and `monospace`. Itemized lists
@@ -152,7 +149,7 @@ Here's a "line block":
 
 and images can be specified like so:
 
-![example image](/content/test/E-6215sVcAMRezw.jpg "An exemplary image")
+![example image](/images/content/test/E-6215sVcAMRezw.jpg "An exemplary image")
 
 Inline math equations go in like so: $\omega = d\phi / dt$. Display
 math should get its own line and be put in in double-dollarsigns:
