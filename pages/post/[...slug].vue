@@ -2,10 +2,10 @@
   <main>
     <article class="grid grid-cols-3 gap-20">
       <div class="col-span-3 lg:col-span-2">
+        <h1 class="text-5xl font-bold">{{ blog.title }}</h1>
         <div class="py-5 gap-2 flex">
           <span v-for="tag in tags" :key="tag" class="badge badge-primary">{{ tag }}</span>
         </div>
-
         <ContentRenderer class="prose dark:prose-invert lg:prose-base prose-sm blog-link" :value="blog">
           <template #not-found>
             <h1>Document not found</h1>
@@ -41,7 +41,9 @@ const { data: blog } = await useAsyncData(slug, () => {
 useHead({
   title: blog.value.title + " | andyjjrt's blog"
 })
-console.log(blog)
+onMounted(() => {
+  window.scrollTo(0, 0)
+})
 
 const tags = computed(() => {
   if (!blog.value) return [];
