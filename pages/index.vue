@@ -2,7 +2,7 @@
   <div class="flex flex-col gap-4">
     <ContentList v-slot="{ list }" :query="{
       sort: {
-        'title': 1
+        'order': 1
       }
     }">
       <Card v-for="article in list" :key="article._path" :article="article" />

@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main v-if="blog">
     <article class="grid grid-cols-3 gap-20">
       <div class="col-span-3 lg:col-span-2">
         <h1 class="text-5xl font-bold">{{ blog.title }}</h1>
@@ -15,7 +15,7 @@
       <div class="hidden lg:block">
         <div v-if="blog.excerpt" class="card glass sticky top-28">
           <div class="card-body">
-            <h2 class="card-title font-bold">Table Of Contents</h2>
+            <h2 class="card-title font-bold">Contents</h2>
             <ul class="space-y-2">
               <template v-for="(t, k) in toc" :key="`toc-item-${k}`">
                 <li>
@@ -38,12 +38,6 @@ const slug = useRoute().params.slug.toString().replace(/,/g, "/");
 const { data: blog } = await useAsyncData(slug, () => {
   return queryContent(slug).findOne();
 });
-useHead({
-  title: blog.value.title + " | andyjjrt's blog"
-})
-onMounted(() => {
-  window.scrollTo(0, 0)
-})
 
 const tags = computed(() => {
   if (!blog.value) return [];
@@ -79,6 +73,30 @@ const scrollTo = (id) => {
       64,
   })
 }
+
+onMounted(() => {
+  window.scrollTo(0, 0);
+  useHead({
+    title: blog.value.title + " | andyjjrt's blog",
+    meta: {
+      keywords: blog.value.tag,
+      meta: [
+        { name: 'keywords', content: blog.value.tag },
+        { name: 'description', content: blog.value.description }
+      ]
+    }
+  })
+})
+
+watch(blog, (val) => {
+  useHead({
+    title: val.title + " | andyjjrt's blog",
+    meta: [
+      { name: 'keywords', content: blog.value.tag },
+      { name: 'description', content: blog.value.description }
+    ]
+  })
+})
 </script>
 
 <style scoped>
